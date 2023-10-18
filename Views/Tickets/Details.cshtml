@@ -6,15 +6,38 @@
             <div class = "title-text">
                 <h1 class = "title">@Html.DisplayFor(model => model.Title)</h1>
                 <img class = "title-image" />
-                <p class = "title-short">Спектакль для детей от трех лет | 3+   </p>
+                <p class = "title-short">@Html.DisplayFor(model => model.Short)</p>
             </div>
             <div class = "title-scenario">
                 <p class = "title-scenario-head">
                     Сценарий
                 </p>
                 <p class = "title-scenario-body">
-                    @Html.DisplayFor(model => model.Description)
+                    @{
+                        string description = Model.Description;
+                        if (description.Length > 200)
+                        {
+                            description = description.Substring(0, 200) + "...";
+                        }
+                    }
+                    @Html.DisplayFor(model => description)
                 </p>
+            </div>
+        </div>
+        <div class="down-block">
+            <div class="down-block-right">
+                <img class="ticket-image" src = "@Html.DisplayFor(model => model.Image)"/>
+                <div class="start-date">@Html.DisplayFor(model => model.StartDate)</div>
+            </div>
+            <div class="down-block-left">
+                <p class="ticket-durality">Продолжительность спектакля:</p>
+                <p>@Html.DisplayFor(model => model.Duration)</p>
+                <p class="ticket-price">Стоимость билетов:</p>
+                <p>@Html.DisplayFor(model => model.Price)</p>
+
+                <div class="ticket-buy">
+                    Купить билеты
+                </div>
             </div>
         </div>
     </div>
@@ -25,7 +48,7 @@
                 <div class = "ticket-block">
                     <h2 class = "ticket-block-title">@Html.DisplayFor(modelItem => item.Title)</h2>
                     <p class = "ticket-block-author">Автор: @Html.DisplayFor(modelItem => item.Director)</p>
-                    <p class = "ticket-block-short">Спектакль для детей от трех лет | 3+</p>
+                    <p class = "ticket-block-short">@Html.DisplayFor(modelItem => item.Short)</p>
                 </div>
             </a>
         }

@@ -13,4 +13,9 @@ public class Spectacle
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     public decimal Price { get; set; }
+    public string? Image { get; set; }
+    public string? Duration { get; set; }
+
+    public string? Short{get; set; }
+
 }

@@ -41,7 +41,6 @@ namespace MyMVCapp.Controllers
             {
                 return NotFound();
             }
-            ViewBag.var1 = await _context.Spectacle.ToListAsync();
 
             return View(spectacle);
         }
@@ -57,7 +56,7 @@ namespace MyMVCapp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SpectacleID,Title,Director,Genre,Description,StartDate,EndDate,Price")] Spectacle spectacle)
+        public async Task<IActionResult> Create([Bind("SpectacleID,Title,Director,Genre,Description,StartDate,EndDate,Price,Image,Duration")] Spectacle spectacle)
         {
             if (ModelState.IsValid)
             {
@@ -89,7 +88,7 @@ namespace MyMVCapp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("SpectacleID,Title,Director,Genre,Description,StartDate,EndDate,Price")] Spectacle spectacle)
+        public async Task<IActionResult> Edit(int id, [Bind("SpectacleID,Title,Director,Genre,Description,StartDate,EndDate,Price,Image,Duration,Short")] Spectacle spectacle)
         {
             if (id != spectacle.SpectacleID)
             {

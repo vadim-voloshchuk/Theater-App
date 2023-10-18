@@ -2,7 +2,13 @@ body{
   font-family: 'Montserrat', sans-serif;
   background-color: #A4193D;
 }
+.table{
+  color: #FCDBB6;
+}
+.row{
+  color: #FCDBB6;
 
+}
 header{
   margin-right: 90px;
   margin-left: 90px;
