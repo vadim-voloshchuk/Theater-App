@@ -1,0 +1,44 @@
+.up-block{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    font-size: 90px;
+    color: #FCDBB6;
+}
+.title-short{
+    color: #FCDBB6;
+}
+.title-scenario{
+    color: #FCDBB6;
+    width: 45%;
+}
+.title-scenario-head{
+    text-align: right;
+    font-weight: 700;
+}
+.tickets-block{
+    display: flex;
+}
+.tickets-block-right{
+    width: 30%;
+    height: 900px;
+    overflow:auto;  
+    margin-left: 10px;
+    border-left: 1px solid #FCDBB6;
+}
+.tickets-block-right::-webkit-scrollbar{
+    display: none;
+  }
+
+.tickets-block-left{
+    width: 70%;
+}
+.ticket-block{
+    margin: 10px;
+    color: #FCDBB6;
+}
+.ticket-block:hover{
+    background-color: rgba(255, 235, 176, 0.514);
+  }
+  

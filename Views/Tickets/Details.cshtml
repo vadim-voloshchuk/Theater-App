@@ -1,0 +1,34 @@
+@model MyMVCapp.Models.Spectacle
+
+<div class = "tickets-block">
+    <div class = "tickets-block-left">    
+        <div class = "up-block">
+            <div class = "title-text">
+                <h1 class = "title">@Html.DisplayFor(model => model.Title)</h1>
+                <img class = "title-image" />
+                <p class = "title-short">Спектакль для детей от трех лет | 3+   </p>
+            </div>
+            <div class = "title-scenario">
+                <p class = "title-scenario-head">
+                    Сценарий
+                </p>
+                <p class = "title-scenario-body">
+                    @Html.DisplayFor(model => model.Description)
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class = "tickets-block-right">
+        @foreach (var item in (List<MyMVCapp.Models.Spectacle>)@ViewBag.var1)
+        {
+            <a href="/Tickets/Details/@Html.DisplayFor(modelItem => item.SpectacleID)">
+                <div class = "ticket-block">
+                    <h2 class = "ticket-block-title">@Html.DisplayFor(modelItem => item.Title)</h2>
+                    <p class = "ticket-block-author">Автор: @Html.DisplayFor(modelItem => item.Director)</p>
+                    <p class = "ticket-block-short">Спектакль для детей от трех лет | 3+</p>
+                </div>
+            </a>
+        }
+
+    </div>
+</div>

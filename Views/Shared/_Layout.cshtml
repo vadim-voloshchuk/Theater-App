@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyMVCapp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+    <div class = "header-mama">
+        <h1>
+            ТАГАНРОГСКИЙ ОРДЕНА “ЗНАКА ПОЧЕТА”
+            <br/>
+            ТЕАТР ИМ. А.П. ЧЕХОВА
+        </h1>
+        <div class = "header-menu">
+            <p class = "header-menu-item">
+                <a href = "/Home">
+                    Главная
+                </a>
+            </p>
+            <p class = "header-menu-item">
+                <a href = "#">
+                    Расписание
+                </a>
+            </p>
+            <p class = "header-menu-item">
+                <a href = "/Tickets">
+                    Билеты
+                </a>
+            </p>
+            <p class = "header-menu-item">
+                <a href = "/Spectacle">
+                    Админ панель
+                </a>
+            </p>
+        </div>
+    </div>
+    <hr>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

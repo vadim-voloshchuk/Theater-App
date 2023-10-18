@@ -1,0 +1,53 @@
+# Основные временные и сгенерированные файлы
+[Tt]humbs.db
+*.DS_Store
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Папка локальных настроек Visual Studio
+.vscode/
+
+# Папка сборки и пакеты NuGet
+bin/
+obj/
+packages/
+
+# Логи и отчеты об ошибках
+logs/
+*.log
+
+# Временные файлы и папки
+[Tt]emp/
+[Ss]tats/
+[Bb]ackup/
+[Rr]elease/
+[Ii]ntellisense/
+
+# Папка компиляции Razor
+CompiledViews/
+
+# Настройки и файлы пользователя
+*.suo
+*.user
+*.suo
+*.user
+*.sln.docstates
+*.suo
+*.user
+
+# Настройки Visual Studio
+.vscode/
+.vscodeignore
+.suo
+*.[Cc]ache
+NuGet.Config
+NuGet/
+*.suo
+*.user
+
+# Конфигурационные файлы
+web.config
+
+# Сгенерированные файлы
+*.generated.cs

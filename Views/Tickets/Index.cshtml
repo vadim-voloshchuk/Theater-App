@@ -1,0 +1,20 @@
+@model IEnumerable<MyMVCapp.Models.Spectacle>
+
+<div class = "tickets-block">
+    <div class = "tickets-block-left">    
+        Выберите билет
+    </div>
+    <div class = "tickets-block-right">
+        @foreach (var item in Model)
+        {
+            <a href="/Tickets/Details/@Html.DisplayFor(modelItem => item.SpectacleID)">
+                <div class = "ticket-block">
+                    <h2 class = "ticket-block-title">@Html.DisplayFor(modelItem => item.Title)</h2>
+                    <p class = "ticket-block-author">Автор: @Html.DisplayFor(modelItem => item.Director)</p>
+                    <p class = "ticket-block-short">Спектакль для детей от трех лет | 3+</p>
+                </div>
+            </a>
+        }
+
+    </div>
+</div>
